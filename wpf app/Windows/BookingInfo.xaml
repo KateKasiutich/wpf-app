@@ -1,0 +1,16 @@
+﻿<Window x:Class="wpf_app.BookingInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpf_app"
+        mc:Ignorable="d"
+        Title="BookingInfo" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="passengersInfo" HorizontalAlignment="Left" Height="121" Margin="51,73,0,0" VerticalAlignment="Top" Width="675"/>
+        <DataGrid x:Name="crewInfo" HorizontalAlignment="Left" Height="132" Margin="53,266,0,0" VerticalAlignment="Top" Width="673" SelectionChanged="DataGrid_SelectionChanged"/>
+        <TextBlock HorizontalAlignment="Left" Margin="55,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run FontSize="20" Text="Passenger's Info"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="60,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run FontSize="20" Text="Crew Info"/></TextBlock>
+
+    </Grid>
+</Window>

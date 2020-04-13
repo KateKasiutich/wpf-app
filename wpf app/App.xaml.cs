@@ -13,5 +13,6 @@ namespace wpf_app
     /// </summary>
     public partial class App : Application
     {
+
     }
 }

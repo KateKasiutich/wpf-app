@@ -24,6 +24,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -55,25 +57,58 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
+    <Compile Include="CrewForm.xaml.cs">
+      <DependentUpon>CrewForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\BookingInfo.xaml.cs">
+      <DependentUpon>BookingInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\BookFlight.xaml.cs">
+      <DependentUpon>BookFlight.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Flight\DateInfo.cs" />
+    <Compile Include="Flight\Flight.cs" />
+    <Compile Include="Windows\WorkWindow.xaml.cs">
+      <DependentUpon>WorkWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="CrewForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\BookingInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\BookFlight.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="Flight\Airport.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="CabinCrew.cs" />
-    <Compile Include="Crew.cs" />
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="recent\Booking.cs" />
+    <Compile Include="personOnBoard\CabinCrew.cs" />
+    <Compile Include="Flight\City.cs" />
+    <Compile Include="personOnBoard\Crew.cs" />
+    <Compile Include="Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Windows\WorkWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Passenger.cs" />
-    <Compile Include="PersonOnBoard.cs" />
-    <Compile Include="Positions.cs" />
+    <Compile Include="personOnBoard\Passenger.cs" />
+    <Compile Include="personOnBoard\PersonOnBoard.cs" />
+    <Compile Include="recent\Positions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -91,7 +126,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

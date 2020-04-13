@@ -7,15 +7,15 @@ using System.Runtime.Serialization;
 
 namespace wpf_app
 {
-    [DataContract]
+    
     public class PersonOnBoard : IComparable
     {
-        [IgnoreDataMember] // чтобы предыдущие занчения счетчика не сохранялись
+        
         protected static ulong createdPersons = 0;
 
-        [IgnoreDataMember]
+        
         protected string name;
-        [DataMember]
+        
         public string Name
         {
             get
@@ -34,9 +34,9 @@ namespace wpf_app
             }
         }
 
-        [IgnoreDataMember]
+        
         protected string email;
-        [DataMember]
+        
         public string Email
         {
             get

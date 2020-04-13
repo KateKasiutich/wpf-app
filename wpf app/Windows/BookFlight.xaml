@@ -1,0 +1,25 @@
+﻿<Window x:Class="wpf_app.BookFlight"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpf_app"
+        mc:Ignorable="d"
+        Title="BookFlight" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="48*"/>
+            <ColumnDefinition Width="13*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="passengersName" HorizontalAlignment="Left" Height="24" Margin="44,100,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="164" AutomationProperties.Name="passengersName"/>
+        <TextBlock HorizontalAlignment="Left" Margin="47,63,0,0" TextWrapping="Wrap" Text="Enter Your Name" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="287,67,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="emailTextBox" HorizontalAlignment="Left" Height="26" Margin="281,100,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="190" AutomationProperties.Name="emailTextBox"/>
+        <TextBlock HorizontalAlignment="Left" Margin="536,68,0,0" TextWrapping="Wrap" Text="Passport Number" VerticalAlignment="Top" FontSize="20" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="passengersPassportNumber" HorizontalAlignment="Left" Height="23" Margin="538,102,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="188" AutomationProperties.Name="passengersPassportNumberTextBox" Grid.ColumnSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="301,178,0,0" TextWrapping="Wrap" Text="Choose Your Flight" VerticalAlignment="Top" FontSize="20"/>
+        <ListBox x:Name="flightBox" HorizontalAlignment="Left" Height="112" Margin="133,224,0,0" VerticalAlignment="Top" Width="522" AutomationProperties.Name="flightBox" Grid.ColumnSpan="2"/>
+        <Button x:Name="bookButton" Content="Book" HorizontalAlignment="Left" Margin="334,362,0,0" VerticalAlignment="Top" Width="102" Height="32" FontSize="20" AutomationProperties.Name="bookButton" Click="Button_Click"/>
+
+    </Grid>
+</Window>

@@ -7,7 +7,7 @@ using System.Runtime.Serialization;
 
 namespace wpf_app
 {
-    [DataContract]
+    
     public class CabinCrew : Crew
     {
         public CabinCrew(string name, string email, Positions position, uint lisence) : base(name, email, position)
@@ -15,7 +15,7 @@ namespace wpf_app
             Lisence = lisence;
         }
 
-        [DataMember]
+        
         public uint Lisence { get; private set; }
 
         public new string GetInfoString()

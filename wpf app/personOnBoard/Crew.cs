@@ -7,10 +7,10 @@ using System.Runtime.Serialization;
 
 namespace wpf_app
 {
-    [DataContract]
+    
     public class Crew : PersonOnBoard
     {
-        [DataMember]
+        
         public Positions Position { get; protected set; }
 
         public Crew(string name, string email, Positions position) : base(name, email)

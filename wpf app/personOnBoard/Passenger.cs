@@ -7,7 +7,7 @@ using System.Runtime.Serialization;
 
 namespace wpf_app
 {
-    [DataContract]
+    
     public class Passenger : PersonOnBoard
     {
         public Passenger(string name, string email, uint passportNumber, uint ticketNumber) : base(name, email)
@@ -16,14 +16,14 @@ namespace wpf_app
             this.ticketNumber = ticketNumber;
         }
 
-        [DataMember]
+        
         private readonly uint ticketNumber; //passenger's ticket number cant't change during the flight
         public uint GetTicketNumber()
         {
             return ticketNumber;
         }
 
-        [DataMember]
+        
         private readonly uint passportNumber;
         public uint GetPassportNumber()
         {
